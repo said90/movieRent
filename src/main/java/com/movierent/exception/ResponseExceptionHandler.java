@@ -19,19 +19,21 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExcep
 @RestController
 public class ResponseExceptionHandler extends ResponseEntityExceptionHandler {
 	
+	// Handling all the exceptions
 	@ExceptionHandler(Exception.class)
 	public final ResponseEntity<ExceptionResponse> handleAllExceptions(NotFoundExceptionModel ex, WebRequest request){
 		ExceptionResponse er = new ExceptionResponse(LocalDateTime.now(), ex.getMessage(), request.getDescription(false));
 		return new ResponseEntity<ExceptionResponse>(er,HttpStatus.INTERNAL_SERVER_ERROR);
 	}
 	
-	//
+	//Not Found Exception personalize
 	@ExceptionHandler(NotFoundExceptionModel.class)
 	public final ResponseEntity<ExceptionResponse> handleModelException(NotFoundExceptionModel ex, WebRequest request){
 		ExceptionResponse er = new ExceptionResponse(LocalDateTime.now(), ex.getMessage(), request.getDescription(false));
 		return new ResponseEntity<ExceptionResponse>(er,HttpStatus.NOT_FOUND);
 	}
 
+	//Handeling basd request Exception
 	@Override
 	protected ResponseEntity<Object> handleMethodArgumentNotValid(MethodArgumentNotValidException ex,
 			HttpHeaders headers, HttpStatus status, WebRequest request) {
