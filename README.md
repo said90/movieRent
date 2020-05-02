@@ -12,6 +12,7 @@ inside the project on resource folder you can find a postman collection to try t
 
 - Java 8
 - Maven
+- Postgres 
 
 
 ### Installing
