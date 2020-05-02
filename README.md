@@ -6,7 +6,7 @@ you can try this api on this url: https://movierent-challange.herokuapp.com
 ## Getting Started
 
 There are two diferent ways to try this application one of the is locally and the other is throught heroku with the url provided before,
-inside the project on resource folder you can find a postman collection to try the endpoints.
+inside the project on resource folder you can find a postman collection to try the endpoints. Endpoint information you find it https://movierent-challange.herokuapp.com/swagger-ui.html#/
 
 ### Prerequisites
 
