@@ -27,6 +27,10 @@ Go to the database and verify if you have created the following to tables 'oauth
 if you don't have created those tables go to the folder project resource and you will find 'data.sql' execute the script ,the script will
 create two tables  and two user: admin and user.
 
+## Runnig project with docker-compose
+
+Open a terminal on root folder of the project and execute next command: **docker-compose up**, and the projecto will run locally.
+
 ### Using API
 
 I'll try to explain the logic used to resolve the challange, First you have to get JWT from 'oauth/token' endpoint with admin or user credentials, the credentials are:
