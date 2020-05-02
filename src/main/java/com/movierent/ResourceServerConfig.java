@@ -34,8 +34,8 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
     @Override
     public void configure(HttpSecurity http) throws Exception {
                 http
-                //.exceptionHandling().authenticationEntryPoint(new AuthorizationException()) //Personalizing error messages
-                //.and()
+                .exceptionHandling().authenticationEntryPoint(new AuthorizationException()) //Personalizing error messages
+                .and()
                 .requestMatchers()
                 .and()
                 .authorizeRequests()                  
