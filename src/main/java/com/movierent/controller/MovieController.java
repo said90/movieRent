@@ -27,8 +27,10 @@ import com.movierent.dto.RentalMovieDTO;
 import com.movierent.dto.SaleMovieDTO;
 import com.movierent.exception.NotFoundExceptionModel;
 import com.movierent.model.Movie;
+import com.movierent.model.MovieLike;
 import com.movierent.model.StockMovie;
 import com.movierent.model.User;
+import com.movierent.service.IMovieLikeService;
 import com.movierent.service.IMovieService;
 import com.movierent.service.IRentalMovieService;
 import com.movierent.service.ISaleMovieService;
@@ -51,6 +53,8 @@ public class MovieController {
 	@Autowired
 	private ISaleMovieService saleMovieService;
 
+	@Autowired
+	private IMovieLikeService movieLikeService;
 	
 	@Autowired
 	private IUserService userService;
@@ -196,7 +200,27 @@ public class MovieController {
 		return new ResponseEntity<Object>(HttpStatus.CREATED);
 	}
 
+	@PreAuthorize("hasAuthority('USER')")
+	@PostMapping("/{id}/like")
+	public ResponseEntity<Object> likeMovie(@PathVariable("id") Integer id) {
+		//validate if the movie exist and is not removed
+		Movie movie = movieService.listById(id);
+		if (movie.getIdMovie() == null) {
+			throw new NotFoundExceptionModel("Not Found id " + id);
+		}else if(movie.getRemovedDateTime() !=null){
+			throw new NotFoundExceptionModel("Not Found Movie");
+		}
+		User user = userService.getLoggedUser();
 
+		List<MovieLike> likes = movieLikeService.verifyLike(id, user.getidUser());
+		//verify is the user already likes this movie
+		if (likes.size() > 0) {
+			throw new NotFoundExceptionModel("This user already liked this movie");
+		}
+		movieLikeService.saveLike(movie);
+		return new ResponseEntity<Object>(HttpStatus.CREATED);
+	}
+	
     //Getting list of movie
 	@GetMapping
 	public ResponseEntity<Page<Movie>> list( 
