@@ -1,0 +1,340 @@
+{
+	"variables": [],
+	"info": {
+		"name": "applaudoChallange",
+		"_postman_id": "731d3fb0-35f9-08c8-cd85-f7cf67fa295e",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Movies",
+			"description": "",
+			"item": [
+				{
+					"name": "Create Movie",
+					"request": {
+						"url": "http://localhost:8080/api/v1/movies",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsic2FpZHJlc291cmNlaWQiXSwidXNlcl9uYW1lIjoiYWRtaW4iLCJzY29wZSI6WyJyZWFkIiwid3JpdGUiXSwiZXhwIjoxNTg4NDE5ODA0LCJhdXRob3JpdGllcyI6WyJBRE1JTiJdLCJqdGkiOiI3ZGJjNDlhNC03NjFkLTRiOWEtODQ2NS01MWE5ZGFkZDZiMWIiLCJjbGllbnRfaWQiOiJzYWlkIn0.EYNdb1AP1iR7hza_etjdg8d93d0COC4J0DEFZPH19J8",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n\"title\":\"Armagedon\",\r\n\t\r\n\"description\": \"Movie Description\",\r\n\t\r\n\"rentPrice\": 2.5,\r\n\t\r\n\"salePrice\": 10.5\r\n}"
+						},
+						"description": "Requirements\n\n1.\tOnly users with admin role are allowed\n\nSecurity requirements\n1. 2-\tOnly admins can add/modify/remove movies."
+					},
+					"response": []
+				},
+				{
+					"name": "Modify Movie",
+					"request": {
+						"url": "http://localhost:8080/api/v1/movies",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsic2FpZHJlc291cmNlaWQiXSwidXNlcl9uYW1lIjoiYWRtaW4iLCJzY29wZSI6WyJyZWFkIiwid3JpdGUiXSwiZXhwIjoxNTg4NDE5ODA0LCJhdXRob3JpdGllcyI6WyJBRE1JTiJdLCJqdGkiOiI3ZGJjNDlhNC03NjFkLTRiOWEtODQ2NS01MWE5ZGFkZDZiMWIiLCJjbGllbnRfaWQiOiJzYWlkIn0.EYNdb1AP1iR7hza_etjdg8d93d0COC4J0DEFZPH19J8",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\n        \"idMovie\": 1,\n        \"title\": \"Movie Title updated\",\n        \"description\": \"Movie Description updated\",\n        \"rentPrice\": 2.5,\n        \"salePrice\": 10.5\n    }"
+						},
+						"description": "Requirements\n1.\tOnly users with admin role are allowed.\n2. 4-\tSave a log of the title, rental price and sale price updates for a movie\n\nSecurity requirements\n1. 2-\tOnly admins can add/modify/remove movies."
+					},
+					"response": []
+				},
+				{
+					"name": "Remove Movie",
+					"request": {
+						"url": "http://localhost:8080/api/v1/movies/1/remove",
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsic2FpZHJlc291cmNlaWQiXSwidXNlcl9uYW1lIjoiYWRtaW4iLCJzY29wZSI6WyJyZWFkIiwid3JpdGUiXSwiZXhwIjoxNTg4NDE5ODA0LCJhdXRob3JpdGllcyI6WyJBRE1JTiJdLCJqdGkiOiI3ZGJjNDlhNC03NjFkLTRiOWEtODQ2NS01MWE5ZGFkZDZiMWIiLCJjbGllbnRfaWQiOiJzYWlkIn0.EYNdb1AP1iR7hza_etjdg8d93d0COC4J0DEFZPH19J8",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "",
+									"value": "",
+									"description": "",
+									"type": "text"
+								}
+							]
+						},
+						"description": "Requirements\n\n1.\tOnly users with admin role are allowed\n\nSecurity requirements\n1. 2-\tOnly admins can add/modify/remove movies."
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Movie",
+					"request": {
+						"url": "http://localhost:8080/api/v1/movies/1",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\n        \"idMovie\": 2,\n        \"title\": \"Movie Title updated\",\n        \"description\": \"Movie Description updated\",\n        \"likes\": null,\n        \"rentPrice\": 2.5,\n        \"salePrice\": 10.5,\n        \"removedDateTime\": null\n    }"
+						},
+						"description": "Requirements\n1.\tOnly users with admin role are allowed"
+					},
+					"response": []
+				},
+				{
+					"name": "Change Movie State",
+					"request": {
+						"url": {
+							"raw": "hhttp://localhost:8080/api/v1/movies/2?state=1",
+							"protocol": "hhttp",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"movies",
+								"2"
+							],
+							"query": [
+								{
+									"key": "state",
+									"value": "1",
+									"equals": true,
+									"description": ""
+								}
+							],
+							"variable": []
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsic2FpZHJlc291cmNlaWQiXSwidXNlcl9uYW1lIjoiYWRtaW4iLCJzY29wZSI6WyJyZWFkIiwid3JpdGUiXSwiZXhwIjoxNTg4NDE5ODA0LCJhdXRob3JpdGllcyI6WyJBRE1JTiJdLCJqdGkiOiI3ZGJjNDlhNC03NjFkLTRiOWEtODQ2NS01MWE5ZGFkZDZiMWIiLCJjbGllbnRfaWQiOiJzYWlkIn0.EYNdb1AP1iR7hza_etjdg8d93d0COC4J0DEFZPH19J8",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": "Requirements\n1. 3- only can be modified by an admin role"
+					},
+					"response": []
+				},
+				{
+					"name": "Create Stock for a Movie",
+					"request": {
+						"url": "http://localhost:8080/api/v1/movies/2/stock",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsic2FpZHJlc291cmNlaWQiXSwidXNlcl9uYW1lIjoiYWRtaW4iLCJzY29wZSI6WyJyZWFkIiwid3JpdGUiXSwiZXhwIjoxNTg4NDE5ODA0LCJhdXRob3JpdGllcyI6WyJBRE1JTiJdLCJqdGkiOiI3ZGJjNDlhNC03NjFkLTRiOWEtODQ2NS01MWE5ZGFkZDZiMWIiLCJjbGllbnRfaWQiOiJzYWlkIn0.EYNdb1AP1iR7hza_etjdg8d93d0COC4J0DEFZPH19J8",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Rent Movie",
+					"request": {
+						"url": "http://localhost:8080/api/v1/movies/2/rent",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsic2FpZHJlc291cmNlaWQiXSwidXNlcl9uYW1lIjoiYWRtaW4iLCJzY29wZSI6WyJyZWFkIiwid3JpdGUiXSwiZXhwIjoxNTg4NDE5ODA0LCJhdXRob3JpdGllcyI6WyJBRE1JTiJdLCJqdGkiOiI3ZGJjNDlhNC03NjFkLTRiOWEtODQ2NS01MWE5ZGFkZDZiMWIiLCJjbGllbnRfaWQiOiJzYWlkIn0.EYNdb1AP1iR7hza_etjdg8d93d0COC4J0DEFZPH19J8",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"quantity\":1,\r\n\"rentalDate\":\"2020-04-30T20:44:55\",\r\n\"dueDate\":\"2020-05-02T20:44:55\"\r\n}"
+						},
+						"description": "Requirements\n5.\t5- Users can rent and buy a movie. For renting functionality you must keep track when the user have to return the movie and apply a monetary penalty if there is a delay.\n6.\t6-\tKeep a log of all rentals and purchases (who bought, how many, when).\n\nSecurity requirements\n3.\tOnly logged in users can rent and buy movies."
+					},
+					"response": []
+				},
+				{
+					"name": "Sale Movie",
+					"request": {
+						"url": "http://localhost:8080/api/v1/movies/2/sale",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsic2FpZHJlc291cmNlaWQiXSwidXNlcl9uYW1lIjoiYWRtaW4iLCJzY29wZSI6WyJyZWFkIiwid3JpdGUiXSwiZXhwIjoxNTg4NDE5ODA0LCJhdXRob3JpdGllcyI6WyJBRE1JTiJdLCJqdGkiOiI3ZGJjNDlhNC03NjFkLTRiOWEtODQ2NS01MWE5ZGFkZDZiMWIiLCJjbGllbnRfaWQiOiJzYWlkIn0.EYNdb1AP1iR7hza_etjdg8d93d0COC4J0DEFZPH19J8",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"quantity\":1,\r\n\"date\":\"2020-04-30T20:44:55\"\r\n\t\r\n}"
+						},
+						"description": "Requirements\n5.\t5- Users can rent and buy a movie. For renting functionality you must keep track when the user have to return the movie and apply a monetary penalty if there is a delay.\n6.\t6-\tKeep a log of all rentals and purchases (who bought, how many, when).\n\nSecurity requirements\n3.\tOnly logged in users can rent and buy movies."
+					},
+					"response": []
+				},
+				{
+					"name": "Like Movie",
+					"request": {
+						"url": "http://localhost:8080/v1/movies/2/like",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsic2FpZHJlc291cmNlaWQiXSwidXNlcl9uYW1lIjoidXNlciIsInNjb3BlIjpbInJlYWQiLCJ3cml0ZSJdLCJleHAiOjE1ODg0MjAwMDIsImF1dGhvcml0aWVzIjpbIlVTRVIiXSwianRpIjoiNmYwMmUyN2UtNzBiMC00YmEyLTk3NjAtMWZhNDE2OTdhNjAyIiwiY2xpZW50X2lkIjoic2FpZCJ9.Y0B8eA2bhW3l1rT9I60xXPFFbUBi4-_6FhuYPDqVCrQ",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "Requirements\n1. 7-\tUsers can like movies.\n\nSecurity requirements\n\n4.\tOnly logged in users can like movies."
+					},
+					"response": []
+				},
+				{
+					"name": "List Movies",
+					"request": {
+						"url": "http://localhost:8080/api/v1/movies",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsic2FpZHJlc291cmNlaWQiXSwidXNlcl9uYW1lIjoiYWRtaW4iLCJzY29wZSI6WyJyZWFkIiwid3JpdGUiXSwiZXhwIjoxNTg4NDE5ODA0LCJhdXRob3JpdGllcyI6WyJBRE1JTiJdLCJqdGkiOiI3ZGJjNDlhNC03NjFkLTRiOWEtODQ2NS01MWE5ZGFkZDZiMWIiLCJjbGllbnRfaWQiOiJzYWlkIn0.EYNdb1AP1iR7hza_etjdg8d93d0COC4J0DEFZPH19J8",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get Movie By Id",
+					"request": {
+						"url": "http://localhost:8080/api/v1/movies/1",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsic2FpZHJlc291cmNlaWQiXSwidXNlcl9uYW1lIjoiYWRtaW4iLCJzY29wZSI6WyJyZWFkIiwid3JpdGUiXSwiZXhwIjoxNTg4MzkzODcyLCJhdXRob3JpdGllcyI6WyJBRE1JTiJdLCJqdGkiOiIzNmY1ZjBiNS03MzM3LTRhNGItOTUwMi04MmY3YzRmODIyNTUiLCJjbGllbnRfaWQiOiJzYWlkIn0.zO3CwflMakV5va5A6SRzEqnVCcMH_pdYLaeVuqc5aBg",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Get Token",
+			"request": {
+				"url": "http://localhost:8080/oauth/token",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic c2FpZDpkZXZTYWlk",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": "password",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "user",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "user",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": "Security requirements\n\n1.\tAdd login/logout functionality.Preferably JWT."
+			},
+			"response": []
+		},
+		{
+			"name": "API Documentation",
+			"request": {
+				"url": "http://localhost:8080/swagger-ui.html#/",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsic2FpZHJlc291cmNlaWQiXSwidXNlcl9uYW1lIjoiYWRtaW4iLCJzY29wZSI6WyJyZWFkIiwid3JpdGUiXSwiZXhwIjoxNTg4MzkzODcyLCJhdXRob3JpdGllcyI6WyJBRE1JTiJdLCJqdGkiOiIzNmY1ZjBiNS03MzM3LTRhNGItOTUwMi04MmY3YzRmODIyNTUiLCJjbGllbnRfaWQiOiJzYWlkIn0.zO3CwflMakV5va5A6SRzEqnVCcMH_pdYLaeVuqc5aBg",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

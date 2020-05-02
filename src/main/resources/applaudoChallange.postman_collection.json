@@ -1,0 +1,498 @@
+{
+	"id": "731d3fb0-35f9-08c8-cd85-f7cf67fa295e",
+	"name": "applaudoChallange",
+	"description": "",
+	"order": [
+		"68c2ffa9-c2c1-8232-bd27-eb53014e35ab",
+		"f8d59e82-1791-4964-27e6-eca66878c71f"
+	],
+	"folders": [
+		{
+			"name": "Movies",
+			"description": "",
+			"collectionId": "731d3fb0-35f9-08c8-cd85-f7cf67fa295e",
+			"order": [
+				"63296b67-30bc-8df3-5ef2-01e5306462f3",
+				"95ce931a-021b-69b8-a2a2-6e807dbccae7",
+				"a6c57db5-5602-55ac-69ad-5c5974c0a739",
+				"94dda346-0f43-8474-db28-a21d3f4f7372",
+				"e1f8ae40-7bdd-2d2f-31bd-95b9350bb5a3",
+				"c467e196-a6f3-30b3-1f82-fc76632938a5",
+				"4b7dde9d-dee8-cfba-1295-7bf64bce6fad",
+				"6cfd37d1-2178-d39f-cbf4-bda5ecb625b9",
+				"c95b87c5-7371-ad6d-0394-da5b70327f59",
+				"16316551-6a4c-d7ac-cadc-213d14573bfa",
+				"72abd610-45a0-00b0-437e-0c2f95794bcf"
+			],
+			"owner": "1465349",
+			"folders_order": [],
+			"id": "bb04beec-7d64-4170-c42b-fffad6de4334"
+		}
+	],
+	"folders_order": [
+		"bb04beec-7d64-4170-c42b-fffad6de4334"
+	],
+	"timestamp": 1588050706209,
+	"owner": "1465349",
+	"public": false,
+	"requests": [
+		{
+			"id": "16316551-6a4c-d7ac-cadc-213d14573bfa",
+			"headers": "",
+			"headerData": [],
+			"url": "https://movierent-challange.herokuapp.com/api/v1/movies",
+			"folder": "bb04beec-7d64-4170-c42b-fffad6de4334",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1588419519017,
+			"name": "List Movies",
+			"description": "",
+			"collectionId": "731d3fb0-35f9-08c8-cd85-f7cf67fa295e",
+			"responses": []
+		},
+		{
+			"id": "4b7dde9d-dee8-cfba-1295-7bf64bce6fad",
+			"headers": "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsic2FpZHJlc291cmNlaWQiXSwidXNlcl9uYW1lIjoiYWRtaW4iLCJzY29wZSI6WyJyZWFkIiwid3JpdGUiXSwiZXhwIjoxNTg4MzgwNTczLCJhdXRob3JpdGllcyI6WyJBRE1JTiJdLCJqdGkiOiIyMzRhM2U3Zi1kZTJiLTRiZTUtOTFkOS05ZTFjYzY3Mjg1ZGEiLCJjbGllbnRfaWQiOiJzYWlkIn0.qzFJsLM_j9tHmd-4vk7WqQ8POfx8QmoEtjy30tND9ik\nContent-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsic2FpZHJlc291cmNlaWQiXSwidXNlcl9uYW1lIjoiYWRtaW4iLCJzY29wZSI6WyJyZWFkIiwid3JpdGUiXSwiZXhwIjoxNTg4MzgwNTczLCJhdXRob3JpdGllcyI6WyJBRE1JTiJdLCJqdGkiOiIyMzRhM2U3Zi1kZTJiLTRiZTUtOTFkOS05ZTFjYzY3Mjg1ZGEiLCJjbGllbnRfaWQiOiJzYWlkIn0.qzFJsLM_j9tHmd-4vk7WqQ8POfx8QmoEtjy30tND9ik",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "https://movierent-challange.herokuapp.com/api/v1/movies/1/rent",
+			"folder": "bb04beec-7d64-4170-c42b-fffad6de4334",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1588419499792,
+			"name": "Rent Movie",
+			"description": "Requirements\n5.\t5- Users can rent and buy a movie. For renting functionality you must keep track when the user have to return the movie and apply a monetary penalty if there is a delay.\n6.\t6-\tKeep a log of all rentals and purchases (who bought, how many, when).\n\nSecurity requirements\n3.\tOnly logged in users can rent and buy movies.",
+			"collectionId": "731d3fb0-35f9-08c8-cd85-f7cf67fa295e",
+			"responses": [],
+			"rawModeData": "{\r\n\"quantity\":1,\r\n\"rentalDate\":\"2020-04-30T20:44:55\",\r\n\"dueDate\":\"2020-05-02T20:44:55\"\r\n}"
+		},
+		{
+			"id": "63296b67-30bc-8df3-5ef2-01e5306462f3",
+			"headers": "Content-Type: application/json\nAuthorization: Bearer  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsic2FpZHJlc291cmNlaWQiXSwidXNlcl9uYW1lIjoiYWRtaW4iLCJzY29wZSI6WyJyZWFkIiwid3JpdGUiXSwiZXhwIjoxNTg4NDAxMDc2LCJhdXRob3JpdGllcyI6WyJBRE1JTiJdLCJqdGkiOiI0NDE3MDdkZC04OTNhLTRjZjYtOGY2Ny04NmE1YzI2NmI3NzYiLCJjbGllbnRfaWQiOiJzYWlkIn0.In8dUh9mtitg0rkImFOFynVppWCentRxXl3SWswS-bs\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsic2FpZHJlc291cmNlaWQiXSwidXNlcl9uYW1lIjoiYWRtaW4iLCJzY29wZSI6WyJyZWFkIiwid3JpdGUiXSwiZXhwIjoxNTg4NDAxMDc2LCJhdXRob3JpdGllcyI6WyJBRE1JTiJdLCJqdGkiOiI0NDE3MDdkZC04OTNhLTRjZjYtOGY2Ny04NmE1YzI2NmI3NzYiLCJjbGllbnRfaWQiOiJzYWlkIn0.In8dUh9mtitg0rkImFOFynVppWCentRxXl3SWswS-bs",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "https://movierent-challange.herokuapp.com/api/v1/movies",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1588419459350,
+			"name": "Create Movie",
+			"description": "Requirements\n\n1.\tOnly users with admin role are allowed\n\nSecurity requirements\n1. 2-\tOnly admins can add/modify/remove movies.",
+			"collectionId": "731d3fb0-35f9-08c8-cd85-f7cf67fa295e",
+			"responses": [],
+			"rawModeData": "{\r\n\r\n\"title\":\"Armagedon\",\r\n\t\r\n\"description\": \"Movie Description\",\r\n\t\r\n\"rentPrice\": 2.5,\r\n\t\r\n\"salePrice\": 10.5\r\n}"
+		},
+		{
+			"id": "68c2ffa9-c2c1-8232-bd27-eb53014e35ab",
+			"headers": "Content-Type: application/x-www-form-urlencoded\nAuthorization: Basic c2FpZDpkZXZTYWlk\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/x-www-form-urlencoded",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Authorization",
+					"value": "Basic c2FpZDpkZXZTYWlk",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8080/oauth/token",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "731d3fb0-35f9-08c8-cd85-f7cf67fa295e",
+			"data": [
+				{
+					"key": "grant_type",
+					"value": "password",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "username",
+					"value": "admin",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "password",
+					"value": "admin",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "urlencoded",
+			"name": "Get Token",
+			"description": "Security requirements\n\n1.\tAdd login/logout functionality.Preferably JWT.",
+			"descriptionFormat": "html",
+			"time": 1588133373306,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "6cfd37d1-2178-d39f-cbf4-bda5ecb625b9",
+			"headers": "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsic2FpZHJlc291cmNlaWQiXSwidXNlcl9uYW1lIjoiYWRtaW4iLCJzY29wZSI6WyJyZWFkIiwid3JpdGUiXSwiZXhwIjoxNTg4MzgwNTczLCJhdXRob3JpdGllcyI6WyJBRE1JTiJdLCJqdGkiOiIyMzRhM2U3Zi1kZTJiLTRiZTUtOTFkOS05ZTFjYzY3Mjg1ZGEiLCJjbGllbnRfaWQiOiJzYWlkIn0.qzFJsLM_j9tHmd-4vk7WqQ8POfx8QmoEtjy30tND9ik\nContent-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsic2FpZHJlc291cmNlaWQiXSwidXNlcl9uYW1lIjoiYWRtaW4iLCJzY29wZSI6WyJyZWFkIiwid3JpdGUiXSwiZXhwIjoxNTg4MzgwNTczLCJhdXRob3JpdGllcyI6WyJBRE1JTiJdLCJqdGkiOiIyMzRhM2U3Zi1kZTJiLTRiZTUtOTFkOS05ZTFjYzY3Mjg1ZGEiLCJjbGllbnRfaWQiOiJzYWlkIn0.qzFJsLM_j9tHmd-4vk7WqQ8POfx8QmoEtjy30tND9ik",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "https://movierent-challange.herokuapp.com/api/v1/movies/2/sale",
+			"folder": "bb04beec-7d64-4170-c42b-fffad6de4334",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1588419505146,
+			"name": "Sale Movie",
+			"description": "Requirements\n5.\t5- Users can rent and buy a movie. For renting functionality you must keep track when the user have to return the movie and apply a monetary penalty if there is a delay.\n6.\t6-\tKeep a log of all rentals and purchases (who bought, how many, when).\n\nSecurity requirements\n3.\tOnly logged in users can rent and buy movies.",
+			"collectionId": "731d3fb0-35f9-08c8-cd85-f7cf67fa295e",
+			"responses": [],
+			"rawModeData": "{\r\n\"quantity\":1,\r\n\"date\":\"2020-04-30T20:44:55\"\r\n\t\r\n}"
+		},
+		{
+			"id": "72abd610-45a0-00b0-437e-0c2f95794bcf",
+			"headers": "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsic2FpZHJlc291cmNlaWQiXSwidXNlcl9uYW1lIjoiYWRtaW4iLCJzY29wZSI6WyJyZWFkIiwid3JpdGUiXSwiZXhwIjoxNTg4MzkzODcyLCJhdXRob3JpdGllcyI6WyJBRE1JTiJdLCJqdGkiOiIzNmY1ZjBiNS03MzM3LTRhNGItOTUwMi04MmY3YzRmODIyNTUiLCJjbGllbnRfaWQiOiJzYWlkIn0.zO3CwflMakV5va5A6SRzEqnVCcMH_pdYLaeVuqc5aBg\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsic2FpZHJlc291cmNlaWQiXSwidXNlcl9uYW1lIjoiYWRtaW4iLCJzY29wZSI6WyJyZWFkIiwid3JpdGUiXSwiZXhwIjoxNTg4MzkzODcyLCJhdXRob3JpdGllcyI6WyJBRE1JTiJdLCJqdGkiOiIzNmY1ZjBiNS03MzM3LTRhNGItOTUwMi04MmY3YzRmODIyNTUiLCJjbGllbnRfaWQiOiJzYWlkIn0.zO3CwflMakV5va5A6SRzEqnVCcMH_pdYLaeVuqc5aBg",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "https://movierent-challange.herokuapp.com/api/v1/movies/1",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1588419524752,
+			"name": "Get Movie By Id",
+			"description": "",
+			"collectionId": "731d3fb0-35f9-08c8-cd85-f7cf67fa295e",
+			"responses": []
+		},
+		{
+			"id": "94dda346-0f43-8474-db28-a21d3f4f7372",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "https://movierent-challange.herokuapp.com/api/v1/movies/1",
+			"folder": "bb04beec-7d64-4170-c42b-fffad6de4334",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1588419481802,
+			"name": "Delete Movie",
+			"description": "Requirements\n1.\tOnly users with admin role are allowed",
+			"collectionId": "731d3fb0-35f9-08c8-cd85-f7cf67fa295e",
+			"responses": [],
+			"rawModeData": "    {\n        \"idMovie\": 2,\n        \"title\": \"Movie Title updated\",\n        \"description\": \"Movie Description updated\",\n        \"likes\": null,\n        \"rentPrice\": 2.5,\n        \"salePrice\": 10.5,\n        \"removedDateTime\": null\n    }"
+		},
+		{
+			"id": "95ce931a-021b-69b8-a2a2-6e807dbccae7",
+			"headers": "Content-Type: application/json\nAuthorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsic2FpZHJlc291cmNlaWQiXSwidXNlcl9uYW1lIjoiYWRtaW4iLCJzY29wZSI6WyJyZWFkIiwid3JpdGUiXSwiZXhwIjoxNTg4NDAyOTk2LCJhdXRob3JpdGllcyI6WyJBRE1JTiJdLCJqdGkiOiJkNGVhMmI1Mi1iNzYxLTRmNDItYjliOC03ZjNiZmVjMjlhYzQiLCJjbGllbnRfaWQiOiJzYWlkIn0.yTJehm9VNuQtNV7XbetQxHedHdD9VKJrnBt-IOpSgxI\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsic2FpZHJlc291cmNlaWQiXSwidXNlcl9uYW1lIjoiYWRtaW4iLCJzY29wZSI6WyJyZWFkIiwid3JpdGUiXSwiZXhwIjoxNTg4NDAyOTk2LCJhdXRob3JpdGllcyI6WyJBRE1JTiJdLCJqdGkiOiJkNGVhMmI1Mi1iNzYxLTRmNDItYjliOC03ZjNiZmVjMjlhYzQiLCJjbGllbnRfaWQiOiJzYWlkIn0.yTJehm9VNuQtNV7XbetQxHedHdD9VKJrnBt-IOpSgxI",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "https://movierent-challange.herokuapp.com/api/v1/movies",
+			"folder": "bb04beec-7d64-4170-c42b-fffad6de4334",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "PUT",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1588419468618,
+			"name": "Modify Movie",
+			"description": "Requirements\n1.\tOnly users with admin role are allowed.\n2. 4-\tSave a log of the title, rental price and sale price updates for a movie\n\nSecurity requirements\n1. 2-\tOnly admins can add/modify/remove movies.",
+			"collectionId": "731d3fb0-35f9-08c8-cd85-f7cf67fa295e",
+			"responses": [],
+			"rawModeData": "    {\n        \"idMovie\": 1,\n        \"title\": \"Movie Title updated\",\n        \"description\": \"Movie Description updated\",\n        \"rentPrice\": 2.5,\n        \"salePrice\": 10.5\n    }"
+		},
+		{
+			"id": "a6c57db5-5602-55ac-69ad-5c5974c0a739",
+			"headers": "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsic2FpZHJlc291cmNlaWQiXSwidXNlcl9uYW1lIjoiYWRtaW4iLCJzY29wZSI6WyJyZWFkIiwid3JpdGUiXSwiZXhwIjoxNTg4Mzc4NzcwLCJhdXRob3JpdGllcyI6WyJBRE1JTiJdLCJqdGkiOiI4MDNhYTU0Ni0yNWVhLTRkOWYtYWNiZi0wZDlmZDdlZjVjODUiLCJjbGllbnRfaWQiOiJzYWlkIn0.3Lf1FmNK4IE6wopVbL5WLumRqDRWmXcH--cKBqlj0oA\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsic2FpZHJlc291cmNlaWQiXSwidXNlcl9uYW1lIjoiYWRtaW4iLCJzY29wZSI6WyJyZWFkIiwid3JpdGUiXSwiZXhwIjoxNTg4Mzc4NzcwLCJhdXRob3JpdGllcyI6WyJBRE1JTiJdLCJqdGkiOiI4MDNhYTU0Ni0yNWVhLTRkOWYtYWNiZi0wZDlmZDdlZjVjODUiLCJjbGllbnRfaWQiOiJzYWlkIn0.3Lf1FmNK4IE6wopVbL5WLumRqDRWmXcH--cKBqlj0oA",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "https://movierent-challange.herokuapp.com/api/v1/movies/1/remove",
+			"folder": "bb04beec-7d64-4170-c42b-fffad6de4334",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "PATCH",
+			"data": [
+				{
+					"key": "",
+					"value": "",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1588419474882,
+			"name": "Remove Movie",
+			"description": "Requirements\n\n1.\tOnly users with admin role are allowed\n\nSecurity requirements\n1. 2-\tOnly admins can add/modify/remove movies.",
+			"collectionId": "731d3fb0-35f9-08c8-cd85-f7cf67fa295e",
+			"responses": []
+		},
+		{
+			"id": "c467e196-a6f3-30b3-1f82-fc76632938a5",
+			"headers": "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsic2FpZHJlc291cmNlaWQiXSwidXNlcl9uYW1lIjoiYWRtaW4iLCJzY29wZSI6WyJyZWFkIiwid3JpdGUiXSwiZXhwIjoxNTg4MzkzODcyLCJhdXRob3JpdGllcyI6WyJBRE1JTiJdLCJqdGkiOiIzNmY1ZjBiNS03MzM3LTRhNGItOTUwMi04MmY3YzRmODIyNTUiLCJjbGllbnRfaWQiOiJzYWlkIn0.zO3CwflMakV5va5A6SRzEqnVCcMH_pdYLaeVuqc5aBg\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsic2FpZHJlc291cmNlaWQiXSwidXNlcl9uYW1lIjoiYWRtaW4iLCJzY29wZSI6WyJyZWFkIiwid3JpdGUiXSwiZXhwIjoxNTg4MzkzODcyLCJhdXRob3JpdGllcyI6WyJBRE1JTiJdLCJqdGkiOiIzNmY1ZjBiNS03MzM3LTRhNGItOTUwMi04MmY3YzRmODIyNTUiLCJjbGllbnRfaWQiOiJzYWlkIn0.zO3CwflMakV5va5A6SRzEqnVCcMH_pdYLaeVuqc5aBg",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "https://movierent-challange.herokuapp.com/api/v1/movies/1/stock",
+			"folder": "bb04beec-7d64-4170-c42b-fffad6de4334",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": null,
+			"dataMode": "params",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1588419494176,
+			"name": "Create Stock for a Movie",
+			"description": "",
+			"collectionId": "731d3fb0-35f9-08c8-cd85-f7cf67fa295e",
+			"responses": []
+		},
+		{
+			"id": "c95b87c5-7371-ad6d-0394-da5b70327f59",
+			"headers": "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsic2FpZHJlc291cmNlaWQiXSwidXNlcl9uYW1lIjoidXNlciIsInNjb3BlIjpbInJlYWQiLCJ3cml0ZSJdLCJleHAiOjE1ODgzODA4NDcsImF1dGhvcml0aWVzIjpbIlVTRVIiXSwianRpIjoiYTA3NjQ5OTYtMzJlMC00YWVhLWJlMmYtZDhhOTllOWUyZmU2IiwiY2xpZW50X2lkIjoic2FpZCJ9.SnjVbH4zkhW_QvgsPKriFMdlYzpKO4LGh3qzMabYnp0\nContent-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsic2FpZHJlc291cmNlaWQiXSwidXNlcl9uYW1lIjoidXNlciIsInNjb3BlIjpbInJlYWQiLCJ3cml0ZSJdLCJleHAiOjE1ODgzODA4NDcsImF1dGhvcml0aWVzIjpbIlVTRVIiXSwianRpIjoiYTA3NjQ5OTYtMzJlMC00YWVhLWJlMmYtZDhhOTllOWUyZmU2IiwiY2xpZW50X2lkIjoic2FpZCJ9.SnjVbH4zkhW_QvgsPKriFMdlYzpKO4LGh3qzMabYnp0",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "https://movierent-challange.herokuapp.com/api/v1/movies/2/like",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1588419511593,
+			"name": "Like Movie",
+			"description": "Requirements\n1. 7-\tUsers can like movies.\n\nSecurity requirements\n\n4.\tOnly logged in users can like movies.",
+			"collectionId": "731d3fb0-35f9-08c8-cd85-f7cf67fa295e",
+			"responses": [],
+			"rawModeData": ""
+		},
+		{
+			"id": "e1f8ae40-7bdd-2d2f-31bd-95b9350bb5a3",
+			"headers": "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsic2FpZHJlc291cmNlaWQiXSwidXNlcl9uYW1lIjoiYWRtaW4iLCJzY29wZSI6WyJyZWFkIiwid3JpdGUiXSwiZXhwIjoxNTg4MzgwNTczLCJhdXRob3JpdGllcyI6WyJBRE1JTiJdLCJqdGkiOiIyMzRhM2U3Zi1kZTJiLTRiZTUtOTFkOS05ZTFjYzY3Mjg1ZGEiLCJjbGllbnRfaWQiOiJzYWlkIn0.qzFJsLM_j9tHmd-4vk7WqQ8POfx8QmoEtjy30tND9ik\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsic2FpZHJlc291cmNlaWQiXSwidXNlcl9uYW1lIjoiYWRtaW4iLCJzY29wZSI6WyJyZWFkIiwid3JpdGUiXSwiZXhwIjoxNTg4MzgwNTczLCJhdXRob3JpdGllcyI6WyJBRE1JTiJdLCJqdGkiOiIyMzRhM2U3Zi1kZTJiLTRiZTUtOTFkOS05ZTFjYzY3Mjg1ZGEiLCJjbGllbnRfaWQiOiJzYWlkIn0.qzFJsLM_j9tHmd-4vk7WqQ8POfx8QmoEtjy30tND9ik",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "https://movierent-challange.herokuapp.com/api/v1/movies/1?state=1",
+			"folder": "bb04beec-7d64-4170-c42b-fffad6de4334",
+			"queryParams": [
+				{
+					"key": "state",
+					"value": "1",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "PATCH",
+			"data": null,
+			"dataMode": "params",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1588419486960,
+			"name": "Change Movie State",
+			"description": "Requirements\n1. 3- only can be modified by an admin role",
+			"collectionId": "731d3fb0-35f9-08c8-cd85-f7cf67fa295e",
+			"responses": []
+		},
+		{
+			"id": "f8d59e82-1791-4964-27e6-eca66878c71f",
+			"headers": "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsic2FpZHJlc291cmNlaWQiXSwidXNlcl9uYW1lIjoiYWRtaW4iLCJzY29wZSI6WyJyZWFkIiwid3JpdGUiXSwiZXhwIjoxNTg4MzkzODcyLCJhdXRob3JpdGllcyI6WyJBRE1JTiJdLCJqdGkiOiIzNmY1ZjBiNS03MzM3LTRhNGItOTUwMi04MmY3YzRmODIyNTUiLCJjbGllbnRfaWQiOiJzYWlkIn0.zO3CwflMakV5va5A6SRzEqnVCcMH_pdYLaeVuqc5aBg\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsic2FpZHJlc291cmNlaWQiXSwidXNlcl9uYW1lIjoiYWRtaW4iLCJzY29wZSI6WyJyZWFkIiwid3JpdGUiXSwiZXhwIjoxNTg4MzkzODcyLCJhdXRob3JpdGllcyI6WyJBRE1JTiJdLCJqdGkiOiIzNmY1ZjBiNS03MzM3LTRhNGItOTUwMi04MmY3YzRmODIyNTUiLCJjbGllbnRfaWQiOiJzYWlkIn0.zO3CwflMakV5va5A6SRzEqnVCcMH_pdYLaeVuqc5aBg",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "https://applaudo-challange.herokuapp.com/swagger-ui.html#/",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "731d3fb0-35f9-08c8-cd85-f7cf67fa295e",
+			"data": null,
+			"dataMode": "params",
+			"name": "API Documentation",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1588400534606,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		}
+	]
+}
