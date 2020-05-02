@@ -30,6 +30,9 @@ public class User {
 	@Column(name = "enabled", nullable=false)
 	private boolean enabled;
 
+	//This notation is used to create a table many to many with roles
+	//This table is going to have all the roles associated to one user 
+	//Eager is used to get all the user roles when get the user instance
 	@ManyToMany(fetch = FetchType.EAGER)
 	@JoinTable(name = "user_roles", joinColumns = @JoinColumn(name = "id_user", referencedColumnName = "idUser"), inverseJoinColumns = @JoinColumn(name = "id_role", referencedColumnName = "idRole"))
 	private List<Role> roles;
