@@ -16,14 +16,15 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
 import com.movierent.repo.IUserRepo;
+import com.movierent.service.IUserService;
+ 
 
 @Service
-public class UserServiceImpl implements UserDetailsService {
+public class UserServiceImpl implements UserDetailsService, IUserService {
 
 	@Autowired
 	private IUserRepo repo;
 	
-	// to set user logged and all roles asociated to the user
 	@Override
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 		com.movierent.model.User user= repo.findOneByUsername(username);		
@@ -41,6 +42,45 @@ public class UserServiceImpl implements UserDetailsService {
 		UserDetails ud = new User(user.getUsername(), user.getPassword(), roles);
 		return ud;
 	}
-	
+
+	@Override
+	public List<com.movierent.model.User> list() {
+		// TODO Auto-generated method stub
+		return repo.findAll();
+	}
+
+	@Override
+	public com.movierent.model.User listById(Integer obj) {
+		Optional<com.movierent.model.User> user = repo.findById(obj);
+		if (!user.isPresent()) {
+			return  new com.movierent.model.User(); 
+		}
+		return user.get() ;
+	}
+
+	@Override
+	public com.movierent.model.User save(com.movierent.model.User obj) {
+		// TODO Auto-generated method stub
+		return repo.save(obj);
+	}
+
+	@Override
+	public com.movierent.model.User edit(com.movierent.model.User obj) {
+		// TODO Auto-generated method stub
+		return repo.save(obj);
+	}
+
+	@Override
+	public void delete(Integer id) {
+		repo.deleteById(id);
+		
+	}
+
+	@Override
+	public com.movierent.model.User getLoggedUser() {
+		Authentication userLogged = SecurityContextHolder.getContext().getAuthentication(); 
+		com.movierent.model.User user= repo.findOneByUsername(userLogged.getName()); 
+		return user;
+	}
 
 }
